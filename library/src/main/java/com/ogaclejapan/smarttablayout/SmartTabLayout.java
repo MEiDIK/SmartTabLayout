@@ -410,6 +410,11 @@ public class SmartTabLayout extends HorizontalScrollView {
       }
 
     }
+
+
+    int currentSelected = viewPager.getCurrentItem();
+    tabStrip.onViewPagerPageChanged(currentSelected, 0f);
+    scrollToTab(currentSelected, 0);
   }
 
   private void scrollToTab(int tabIndex, float positionOffset) {
